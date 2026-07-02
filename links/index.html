@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PS Code | Links</title>
+  
+  <!-- Otimização SEO -->
+  <meta name="description" content="Acesse todos os links, portfólio, serviços e contato direto com a PS Code. Criação de Sites, Tráfego Pago e Redes Sociais.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800;12..96,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ps-bg: #050508;
+      --ps-bg-2: #080B12;
+      --ps-cyan: #00E5FF;
+      --ps-blue: #1B7CFF;
+      --ps-purple: #7000FF;
+      --ps-purple-2: #9B5CFF;
+      --ps-green: #22C55E;
+      --ps-white: #FFFFFF;
+      --ps-text: rgba(255,255,255,0.78);
+      --ps-muted: rgba(255,255,255,0.48);
+      --ps-border: rgba(255,255,255,0.10);
+      --ps-border-strong: rgba(0,229,255,0.32);
+      --ps-font-title: 'Bricolage Grotesque', sans-serif;
+      --ps-font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--ps-bg);
+    }
+
+    body {
+      font-family: var(--ps-font-body);
+      color: var(--ps-white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    .ps-linktree-page {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 8%, rgba(0,229,255,0.16) 0%, transparent 34%),
+        radial-gradient(circle at 15% 18%, rgba(112,0,255,0.18) 0%, transparent 28%),
+        radial-gradient(circle at 85% 82%, rgba(0,229,255,0.12) 0%, transparent 32%),
+        linear-gradient(180deg, #050508 0%, #070A10 48%, #050508 100%);
+      padding: 60px 18px 60px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* Grids e overlays decorativas */
+    .ps-linktree-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(5,5,8,0.90) 0%, transparent 22%, transparent 78%, rgba(5,5,8,0.90) 100%),
+        radial-gradient(ellipse 62% 62% at 50% 34%, transparent 0%, rgba(5,5,8,0.45) 56%, rgba(5,5,8,0.88) 100%);
+    }
+
+    .ps-linktree-page::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.15;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(circle at 50% 36%, black 0%, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle at 50% 36%, black 0%, transparent 72%);
+    }
+
+    #ps-code-rain {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.65;
+    }
+
+    .ps-shell {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ps-logo-area {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .ps-logo-glow {
+      position: absolute;
+      top: -44px;
+      left: 50%;
+      width: 260px;
+      height: 180px;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(circle, rgba(0,229,255,0.20) 0%, transparent 60%),
+        radial-gradient(circle at 65% 40%, rgba(112,0,255,0.20) 0%, transparent 55%);
+      filter: blur(16px);
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .ps-logo-img {
+      position: relative;
+      z-index: 2;
+      width: 86px;
+      height: 86px;
+      object-fit: contain;
+      margin-bottom: 16px;
+      filter:
+        drop-shadow(0 0 16px rgba(0,229,255,0.44))
+        drop-shadow(0 0 26px rgba(112,0,255,0.28));
+      animation: ps-float-logo 4.8s ease-in-out infinite;
+    }
+
+    @keyframes ps-float-logo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .ps-brand-name {
+      position: relative;
+      z-index: 2;
+      font-family: var(--ps-font-title);
+      font-size: clamp(32px, 8vw, 46px);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      color: var(--ps-white);
+      text-transform: uppercase;
+      text-shadow: 0 0 24px rgba(0,229,255,0.15);
+    }
+
+    .ps-brand-subtitle {
+      position: relative;
+      z-index: 2;
+      margin-top: 8px;
+      font-family: var(--ps-font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+      padding-left: 0.42em;
+    }
+
+    .ps-badge {
+      position: relative;
+      z-index: 2;
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-family: var(--ps-font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ps-cyan);
+      background:
+        linear-gradient(var(--ps-bg), var(--ps-bg)) padding-box,
+        linear-gradient(90deg, var(--ps-cyan), var(--ps-purple)) border-box;
+      border: 1px solid transparent;
+      box-shadow:
+        0 0 20px rgba(0,229,255,0.12),
+        inset 0 0 16px rgba(112,0,255,0.06);
+    }
+
+    .ps-intro {
+      position: relative;
+      z-index: 2;
+      max-width: 440px;
+      margin-top: 22px;
+      font-family: var(--ps-font-body);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .ps-intro strong {
+      color: var(--ps-cyan);
+      font-weight: 800;
+      text-shadow: 0 0 16px rgba(0,229,255,0.3);
+    }
+
+    /* Links container */
+    .ps-links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    /* Cards */
+    .ps-card {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      min-height: 120px;
+      display: grid;
+      grid-template-columns: 70px 1fr 42px;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 22px;
+      border-radius: 24px;
+      text-decoration: none;
+      color: var(--ps-white);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.025) 48%, rgba(0,0,0,0.18) 100%);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow:
+        0 20px 40px rgba(0,0,0,0.36),
+        inset 0 1px 0 rgba(255,255,255,0.10);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      transition:
+        transform 0.34s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.34s ease,
+        box-shadow 0.34s ease,
+        background 0.34s ease;
+    }
+
+    .ps-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      border-radius: inherit;
+      opacity: 0.9;
+      background:
+        radial-gradient(circle at 12% 24%, rgba(0,229,255,0.15), transparent 32%),
+        radial-gradient(circle at 100% 100%, rgba(112,0,255,0.12), transparent 38%);
+    }
+
+    /* Efeito de brilho ao passar o mouse */
+    .ps-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      opacity: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.11), transparent);
+      transform: translateX(-110%);
+      transition: opacity 0.3s ease;
+    }
+
+    .ps-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,229,255,0.35);
+      background:
+        linear-gradient(135deg, rgba(0,229,255,0.08) 0%, rgba(255,255,255,0.03) 48%, rgba(112,0,255,0.07) 100%);
+      box-shadow:
+        0 24px 50px rgba(0,0,0,0.44),
+        0 0 28px rgba(0,229,255,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.14);
+    }
+
+    .ps-card:hover::after {
+      opacity: 1;
+      animation: ps-shine 0.9s ease forwards;
+    }
+
+    @keyframes ps-shine {
+      0% { transform: translateX(-110%); }
+      100% { transform: translateX(110%); }
+    }
+
+    .ps-card.ps-purple {
+      border-color: rgba(112,0,255,0.25);
+    }
+
+    .ps-card.ps-purple:hover {
+      border-color: rgba(155,92,255,0.48);
+      box-shadow:
+        0 24px 50px rgba(0,0,0,0.44),
+        0 0 30px rgba(112,0,255,0.14),
+        inset 0 1px 0 rgba(255,255,255,0.14);
+    }
+
+    .ps-card.ps-green {
+      border-color: rgba(34,197,94,0.4);
+      background:
+        linear-gradient(135deg, rgba(34,197,94,0.16) 0%, rgba(255,255,255,0.03) 46%, rgba(0,229,255,0.06) 100%);
+      box-shadow:
+        0 26px 60px rgba(0,0,0,0.45),
+        0 0 34px rgba(34,197,94,0.18),
+        inset 0 1px 0 rgba(34,197,94,0.18);
+    }
+
+    .ps-card.ps-green::before {
+      background:
+        radial-gradient(circle at 10% 50%, rgba(34,197,94,0.22), transparent 30%),
+        radial-gradient(circle at 100% 50%, rgba(0,229,255,0.14), transparent 38%);
+    }
+
+    .ps-card.ps-green:hover {
+      border-color: rgba(34,197,94,0.7);
+      box-shadow:
+        0 28px 70px rgba(0,0,0,0.5),
+        0 0 40px rgba(34,197,94,0.24),
+        inset 0 1px 0 rgba(34,197,94,0.24);
+    }
+
+    /* Ícones dentro dos cards */
+    .ps-icon-box {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.12),
+        0 14px 24px rgba(0,0,0,0.28);
+      color: var(--ps-cyan);
+    }
+
+    .ps-card.ps-purple .ps-icon-box { color: var(--ps-purple-2); }
+    .ps-card.ps-green .ps-icon-box { color: var(--ps-green); }
+
+    .ps-icon-box svg {
+      width: 32px;
+      height: 32px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      filter: drop-shadow(0 0 8px currentColor);
+    }
+
+    .ps-icon-box img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      display: block;
+      filter:
+        drop-shadow(0 0 8px rgba(0,229,255,0.40))
+        drop-shadow(0 0 14px rgba(112,0,255,0.20));
+    }
+
+    .ps-card-content {
+      min-width: 0;
+    }
+
+    .ps-card-title {
+      font-family: var(--ps-font-title);
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ps-white);
+      margin-bottom: 6px;
+    }
+
+    .ps-card-desc {
+      font-family: var(--ps-font-body);
+      font-size: 13.5px;
+      font-weight: 400;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.68);
+      max-width: 320px;
+    }
+
+    .ps-card-cta {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--ps-font-title);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ps-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .ps-card.ps-green .ps-card-cta {
+      color: var(--ps-green);
+    }
+
+    .ps-card-cta svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      fill: none;
+      transition: transform 0.25s ease;
+    }
+
+    .ps-card:hover .ps-card-cta svg {
+      transform: translateX(4px);
+    }
+
+    .ps-card-number {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-family: var(--ps-font-body);
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: -0.05em;
+    }
+
+    .ps-arrow {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ps-cyan);
+      border: 1px solid rgba(0,229,255,0.3);
+      background: rgba(0,0,0,0.16);
+      transition: all 0.25s ease;
+    }
+
+    .ps-card.ps-green .ps-arrow {
+      color: var(--ps-green);
+      border-color: rgba(34,197,94,0.36);
+    }
+
+    .ps-arrow svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ps-card:hover .ps-arrow {
+      transform: translateX(2px);
+      background: rgba(0,229,255,0.06);
+      border-color: var(--ps-cyan);
+    }
+
+    .ps-card.ps-green:hover .ps-arrow {
+      background: rgba(34,197,94,0.06);
+      border-color: var(--ps-green);
+    }
+
+    .ps-footer {
+      width: 100%;
+      margin-top: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.32);
+      font-family: var(--ps-font-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .ps-footer::before,
+    .ps-footer::after {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,229,255,0.4));
+    }
+
+    .ps-footer::after {
+      background: linear-gradient(90deg, rgba(0,229,255,0.4), transparent);
+    }
+
+    /* Animação suave na entrada */
+    .ps-reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition:
+        opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ps-reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .ps-delay-1 { transition-delay: 60ms; }
+    .ps-delay-2 { transition-delay: 120ms; }
+    .ps-delay-3 { transition-delay: 180ms; }
+    .ps-delay-4 { transition-delay: 240ms; }
+    .ps-delay-5 { transition-delay: 300ms; }
+    .ps-delay-6 { transition-delay: 360ms; }
+
+    @media (max-width: 520px) {
+      .ps-linktree-page {
+        padding: 44px 16px 44px;
+      }
+      .ps-logo-avatar {
+        width: 78px;
+        height: 78px;
+        border-radius: 18px;
+        font-size: 28px;
+      }
+      .ps-brand-subtitle {
+        font-size: 9px;
+        letter-spacing: 0.34em;
+      }
+      .ps-badge {
+        min-height: 34px;
+        padding: 0 18px;
+        font-size: 10px;
+      }
+      .ps-intro {
+        font-size: 14.5px;
+        max-width: 320px;
+      }
+      .ps-links {
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .ps-card {
+        grid-template-columns: 58px 1fr 36px;
+        gap: 12px;
+        padding: 16px 14px;
+        border-radius: 20px;
+        min-height: auto;
+      }
+      .ps-icon-box {
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+      }
+      .ps-icon-box svg {
+        width: 26px;
+        height: 26px;
+      }
+      .ps-card-title {
+        font-size: 20px;
+      }
+      .ps-card-desc {
+        font-size: 12.5px;
+      }
+      .ps-card-cta {
+        font-size: 12px;
+      }
+      .ps-arrow {
+        width: 34px;
+        height: 34px;
+      }
+      .ps-arrow svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="ps-linktree-page">
+    
+    <!-- Efeito Matrix Canvas -->
+    <canvas id="ps-code-rain" aria-hidden="true"></canvas>
+
+    <main class="ps-shell">
+
+      <!-- Header principal -->
+      <header class="ps-logo-area ps-reveal">
+        <div class="ps-logo-glow" aria-hidden="true"></div>
+        
+        <img decoding="async" src="../assets/logo.png" alt="PS Code Logo" class="ps-logo-img">
+
+        <h1 class="ps-brand-name">PS Code</h1>
+        <div class="ps-brand-subtitle">Tech &amp; Marketing</div>
+
+        <span class="ps-badge">Growth Partner</span>
+
+        <p class="ps-intro">
+          Estratégia, tecnologia e performance para negócios que buscam
+          <strong>escalar de verdade.</strong>
+        </p>
+      </header>
+
+      <!-- Links de Ação -->
+      <div class="ps-links">
+
+        <!-- 01. Portfólio -->
+        <a href="../portfolio/index.html" class="ps-card ps-purple ps-reveal ps-delay-1">
+          <div class="ps-icon-box">
+            <img decoding="async" src="../assets/icon-portfolio.png" alt="Portfólio">
+          </div>
+          <div class="ps-card-content">
+            <h2 class="ps-card-title">Portfólio</h2>
+            <p class="ps-card-desc">Veja projetos reais, criados com estratégia, design e foco em resultado.</p>
+            <span class="ps-card-cta">
+              Ver projetos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="ps-card-number">01</span>
+          <div class="ps-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </a>
+
+        <!-- 02. Criação de Sites -->
+        <a href="../index.html#servicos" class="ps-card ps-reveal ps-delay-2">
+          <div class="ps-icon-box">
+            <img decoding="async" src="../assets/icon-sites.png" alt="Criação de Sites">
+          </div>
+          <div class="ps-card-content">
+            <h2 class="ps-card-title">Criação de Sites</h2>
+            <p class="ps-card-desc">Sites rápidos, bonitos e preparados para converter e aparecer no Google.</p>
+            <span class="ps-card-cta">
+              Saiba mais
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="ps-card-number">02</span>
+          <div class="ps-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </a>
+
+        <!-- 03. Preços -->
+        <a href="../index.html#precos" class="ps-card ps-purple ps-reveal ps-delay-3">
+          <div class="ps-icon-box">
+            <img decoding="async" src="../assets/icon-precos.png" alt="Preços">
+          </div>
+          <div class="ps-card-content">
+            <h2 class="ps-card-title">Preços</h2>
+            <p class="ps-card-desc">Veja valores de referência para landing pages, sites institucionais, e-commerce e projetos premium.</p>
+            <span class="ps-card-cta">
+              Ver valores
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="ps-card-number">03</span>
+          <div class="ps-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </a>
+
+        <!-- 04. SEO & GEO -->
+        <a href="../index.html#servicos" class="ps-card ps-purple ps-reveal ps-delay-4">
+          <div class="ps-icon-box">
+            <img decoding="async" src="../assets/icon-seo.png" alt="SEO & GEO">
+          </div>
+          <div class="ps-card-content">
+            <h2 class="ps-card-title">SEO &amp; GEO</h2>
+            <p class="ps-card-desc">Posicione sua empresa no Google com estratégia orgânica e crescimento sustentável.</p>
+            <span class="ps-card-cta">
+              Saiba mais
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="ps-card-number">04</span>
+          <div class="ps-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </a>
+
+        <!-- 05. Google Ads -->
+        <a href="../index.html#servicos" class="ps-card ps-reveal ps-delay-5">
+          <div class="ps-icon-box">
+            <img decoding="async" src="../assets/icon-google-ads.png" alt="Google Ads">
+          </div>
+          <div class="ps-card-content">
+            <h2 class="ps-card-title">Google Ads</h2>
+            <p class="ps-card-desc">Anúncios para gerar leads com intenção de compra e resultado mensurável.</p>
+            <span class="ps-card-cta">
+              Saiba mais
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+          <span class="ps-card-number">05</span>
+          <div class="ps-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </a>
+
+        <!-- Falar no WhatsApp -->
+        <a href="https://wa.me/5566992098255?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20meu%20projeto." target="_blank" rel="noopener nofollow" class="ps-card ps-green ps-reveal ps-delay-6">
+          <div class="ps-icon-box">
+            <!-- Icone WhatsApp -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div class="ps-card-content">
+            <h2 class="ps-card-title">Falar no WhatsApp</h2>
+            <p class="ps-card-desc">Atendimento direto e rápido para impulsionar seu negócio.</p>
+            <span class="ps-card-cta">
+              Começar conversa
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+          <div class="ps-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+        </a>
+
+      </div>
+
+      <footer class="ps-footer">
+        PS Code
+      </footer>
+
+    </main>
+  </section>
+
+  <!-- Script Matrix Code Rain -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('ps-code-rain');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+
+      const WORDS = [
+        'SITES',
+        'META ADS',
+        'GOOGLE ADS',
+        'REDES SOCIAIS',
+        'SEO',
+        'CÓDIGO',
+        'PS CODE',
+        'DESIGN',
+        'PERFORMANCE',
+        'TRÁFEGO',
+        'LEADS',
+        'CONVERSÃO',
+        'COPY',
+        'WEBDEV',
+        'UI/UX'
+      ];
+
+      const SYMBOLS = ['0', '1', '{ }', '< >', '/ /', '+', '#', '*', '::', '()', '[]', '=>'];
+      const COLORS = ['#00E5FF', '#1B7CFF', '#7000FF', '#9B5CFF'];
+
+      let width = 0;
+      let height = 0;
+      let dpr = 1;
+      let columns = [];
+      let animationFrame;
+      let lastTime = 0;
+
+      function randomFrom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function makeColumn(x, index) {
+        const isWordColumn = Math.random() > 0.4;
+
+        return {
+          x,
+          y: Math.random() * -height,
+          speed: 0.4 + Math.random() * 0.9,
+          gap: isWordColumn ? 110 + Math.random() * 80 : 20 + Math.random() * 10,
+          color: randomFrom(COLORS),
+          alpha: 0.22 + Math.random() * 0.4,
+          size: isWordColumn ? 12 + Math.random() * 4 : 8 + Math.random() * 4,
+          wordMode: isWordColumn,
+          index,
+          offset: Math.random() * 900
+        };
+      }
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const isMobile = width <= 680;
+        const spacing = isMobile ? 30 : 38;
+        const count = Math.ceil(width / spacing) + 2;
+
+        columns = [];
+
+        for (let i = 0; i < count; i++) {
+          const x = i * spacing + Math.random() * 10;
+          const col = makeColumn(x, i);
+
+          const centerDistance = Math.abs((x / width) - 0.5);
+
+          if (centerDistance < 0.28) {
+            col.alpha *= isMobile ? 0.16 : 0.08;
+          } else if (centerDistance < 0.38) {
+            col.alpha *= 0.4;
+          }
+
+          columns.push(col);
+        }
+      }
+
+      function drawRain(timestamp) {
+        animationFrame = requestAnimationFrame(drawRain);
+
+        if (timestamp - lastTime < 33) return;
+        lastTime = timestamp;
+
+        ctx.clearRect(0, 0, width, height);
+
+        // Preenche com fundo escuro semi-transparente
+        ctx.fillStyle = 'rgba(5,5,8,1)';
+        ctx.fillRect(0, 0, width, height);
+
+        for (const col of columns) {
+          const isWordMode = col.wordMode;
+          const fontSize = col.size;
+          const fontWeight = isWordMode ? 600 : 400;
+
+          ctx.save();
+          ctx.font = `${fontWeight} ${fontSize}px "Inter", sans-serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+
+          let y = col.y;
+          const trailLength = isWordMode ? 5 : 10;
+
+          for (let i = 0; i < trailLength; i++) {
+            if (y < -100 || y > height + 100) {
+              y -= col.gap;
+              continue;
+            }
+
+            const text = isWordMode
+              ? WORDS[(i + col.index) % WORDS.length]
+              : (Math.random() > 0.88 ? randomFrom(WORDS) : randomFrom(SYMBOLS));
+
+            const alpha = col.alpha * (1 - (i / trailLength));
+
+            ctx.globalAlpha = alpha;
+            ctx.fillStyle = col.color;
+
+            if (isWordMode) {
+              ctx.save();
+              ctx.translate(col.x, y);
+              ctx.rotate(-Math.PI / 2);
+              ctx.fillText(text, 0, 0);
+              ctx.restore();
+            } else {
+              ctx.fillText(text, col.x, y);
+            }
+
+            y -= col.gap;
+          }
+
+          ctx.restore();
+
+          col.y += col.speed * 4.5;
+
+          if (col.y > height + 150) {
+            col.y = -col.gap * (1 + Math.random() * 4);
+            col.color = randomFrom(COLORS);
+            col.speed = 0.4 + Math.random() * 0.9;
+          }
+        }
+      }
+
+      resize();
+
+      window.addEventListener('resize', resize, { passive: true });
+      animationFrame = requestAnimationFrame(drawRain);
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          cancelAnimationFrame(animationFrame);
+        } else {
+          lastTime = 0;
+          animationFrame = requestAnimationFrame(drawRain);
+        }
+      });
+    })();
+  </script>
+
+  <!-- Script Intersection Observer -->
+  <script>
+    (function () {
+      const elements = document.querySelectorAll('.ps-reveal');
+
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -20px 0px'
+      });
+
+      elements.forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>

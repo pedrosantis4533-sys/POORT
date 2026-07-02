@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Ads | PS Code</title>
+  <meta name="description" content="Atraia clientes prontos para comprar no momento exato em que pesquisam pelo seu serviço no Google. Campanhas otimizadas com orçamento sob controle e retorno rápido.">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800;12..96,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Central Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- GSAP for scroll animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Menu Flutuante -->
+  <nav class="ps-nav" id="idealNav" aria-label="Menu principal">
+    <div class="ps-nav__backdrop" id="idealNavBackdrop"></div>
+    <div class="ps-nav__island" id="idealNavIsland">
+      <a href="../#hero" class="nav-link">
+        <img src="../assets/logo.png" alt="Início">
+        Início
+      </a>
+      <a href="../portfolio/" class="nav-link">
+        <img src="../assets/icon-portfolio.png" alt="Portfólio">
+        Portfólio
+      </a>
+      <a href="../#servicos" class="nav-link">
+        <img src="../assets/icon-sites.png" alt="Serviços">
+        Serviços
+      </a>
+      <a href="../precos/" class="nav-link">
+        <img src="../assets/icon-precos.png" alt="Preços">
+        Preços
+      </a>
+      <a href="../#contato" class="nav-link">
+        <img src="../assets/icon-seo.png" alt="Contato">
+        Contato
+      </a>
+      <div class="ps-nav__island-divider"></div>
+      <a href="../links/" class="nav-link">
+        <img src="../assets/icon-links.png" alt="Links">
+        Links
+      </a>
+      <div class="ps-nav__island-divider"></div>
+      <div class="ps-nav__island-socials">
+        <a href="https://wa.me/5566992098255" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="ps-nav__trigger" id="idealNavTrigger" role="button" aria-expanded="false" aria-label="Abrir menu">
+      <img src="../assets/icon-trigger.png" alt="PS Logo Trigger">
+      <div class="ps-nav__trigger-x"></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="ads-hero">
+    <div class="ads-glow-tr"></div>
+    <div class="ads-hero-inner">
+      <span class="ads-tag" id="adsTag">Google Ads</span>
+      
+      <h1 class="ads-headline" id="adsTitle">
+        Seu cliente já está procurando.<br>
+        <span>A questão é: ele te acha?</span>
+      </h1>
+
+      <p class="ads-desc" id="adsDesc">
+        Google Ads coloca o seu negócio na frente de quem já tem intenção de comprar — na hora certa, para a pessoa certa. <strong>Ao contrário das redes sociais, aqui você não interrompe ninguém.</strong> O cliente digitou o que precisa, e o seu anúncio aparece exatamente ali. Sem achismo, sem desperdício. Cada real investido com estratégia e resultado mensurável.
+      </p>
+
+      <a href="https://wa.me/5566992098255?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20no%20Google%20Ads%20com%20a%20PS%20Code." target="_blank" class="btn-ads" id="adsHeroCTA" rel="nofollow noopener">
+        Quero atrair clientes agora
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Cards & Content Section -->
+  <section class="ads-cards-section">
+    <div class="ads-cards-inner">
+      
+      <!-- Bloco Destaque -->
+      <div class="ads-highlight-block" id="adsHighlight">
+        <div class="ads-highlight-icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <div class="ads-highlight-content">
+          <h2 class="ads-highlight-title">resultado no Google — desde o primeiro dia</h2>
+          <p class="ads-highlight-text">
+            Com Google Ads, o seu negócio aparece <strong>imediatamente nas primeiras posições</strong> — antes mesmo do SEO orgânico começar a crescer. É a estratégia certa para quem precisa de resultado rápido: novos clientes ainda essa semana, enquanto o posicionamento orgânico é construído no longo prazo. <strong>Os dois juntos formam a combinação mais poderosa de aquisição de clientes online.</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Grid de Pilares de Ads -->
+      <div class="ads-grid" id="adsGrid">
+        <div class="ads-card ads-item">
+          <div class="ads-card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Segmentação Cirúrgica</h3>
+          <p>Seus anúncios aparecem apenas para quem já está procurando o que você vende — cidade, horário, dispositivo e intenção de compra exatos.</p>
+        </div>
+
+        <div class="ads-card ads-item">
+          <div class="ads-card-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Orçamento sob Controle</h3>
+          <p>Você define quanto quer investir por dia. Sem surpresas na fatura — cada centavo é rastreado e otimizado para gerar o máximo de resultado.</p>
+        </div>
+
+        <div class="ads-card ads-item">
+          <div class="ads-card-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Resultado desde o Dia 1</h3>
+          <p>Diferente do SEO que leva meses, o Ads coloca você na primeira posição do Google imediatamente — ideal para quem precisa de clientes agora.</p>
+        </div>
+
+        <div class="ads-card ads-item">
+          <div class="ads-card-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Campanhas para Cada Objetivo</h3>
+          <p>Geração de ligações, visitas ao site, preenchimento de formulário ou visitas à loja física — montamos a campanha certa para o que você precisa.</p>
+        </div>
+
+        <div class="ads-card ads-item">
+          <div class="ads-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Relatórios Claros e Diretos</h3>
+          <p>Você sabe exatamente o que está acontecendo: quantos cliques, quantos contatos gerados, qual o custo por lead. Sem enrolação, sem relatório de agência.</p>
+        </div>
+
+        <div class="ads-card ads-item">
+          <div class="ads-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Remarketing Inteligente</h3>
+          <p>Impactamos novamente quem visitou o seu site mas não entrou em contato — lembrando o potencial cliente da sua solução no momento certo.</p>
+        </div>
+      </div>
+
+      <!-- CTA Bloco Final -->
+      <div class="ads-cta-block" id="adsCTA">
+        <h2 class="ads-cta-title">Enquanto você não anuncia,<br><span>seu concorrente está anunciando.</span></h2>
+        <p class="ads-cta-desc">
+          Google Ads sem estratégia é dinheiro jogado fora. Com estratégia, é o investimento com maior retorno que o seu negócio pode fazer. Vamos conversar.
+        </p>
+        <a href="https://wa.me/5566992098255?text=Ol%C3%A1%21%20Quero%20anunciar%20no%20Google%20Ads." target="_blank" class="btn-ads-wpp" rel="nofollow noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Completo -->
+  <footer class="ideal-footer" id="idealFooter">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="../assets/logo.png" alt="PS Code Logo" class="footer-logo-img">
+            <div class="footer-logo-name">
+              PS Code
+              <span>Tech &amp; Marketing</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Sites personalizados, SEO, tráfego pago (Google &amp; Meta Ads) e gestão de redes sociais para negócios que querem crescer online de verdade.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/5566992098255" target="_blank" class="footer-social-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Páginas</p>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio/index.html">Portfólio</a>
+          <a href="../links/index.html">Links</a>
+          <a href="../index.html#contato">Contato</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Serviços</p>
+          <a href="../index.html#servicos">Criação de Sites</a>
+          <a href="../index.html#servicos">SEO &amp; GEO</a>
+          <a href="../index.html#servicos">Google Ads &amp; Meta Ads</a>
+          <a href="../index.html#servicos">Redes Sociais</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Contato</p>
+          <a href="https://wa.me/5566992098255" target="_blank">WhatsApp</a>
+          <a href="mailto:contato@pscode.com.br">E-mail</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 PS Code. Todos os direitos reservados.</p>
+        <p class="footer-copy">Site · SEO · Tráfego Pago · Social Media</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initial animations
+    gsap.timeline()
+      .to('#adsTag',     { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' })
+      .to('#adsTitle',   { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.3')
+      .to('#adsDesc',    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4')
+      .to('#adsHeroCTA', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4');
+
+    gsap.to('#adsHighlight', {
+      opacity: 1, y: 0, duration: 0.9, ease: 'back.out(1.2)',
+      scrollTrigger: { trigger: '#adsHighlight', start: 'top 85%' }
+    });
+
+    gsap.to('.ads-item', {
+      opacity: 1, y: 0, duration: 0.7, stagger: 0.12,
+      ease: 'back.out(1.2)',
+      scrollTrigger: { trigger: '#adsGrid', start: 'top 85%' }
+    });
+
+    gsap.to('#adsCTA', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+      scrollTrigger: { trigger: '#adsCTA', start: 'top 85%' }
+    });
+
+    // Menu logic
+    (function () {
+      const nav      = document.getElementById('idealNav');
+      const trigger  = document.getElementById('idealNavTrigger');
+      const backdrop = document.getElementById('idealNavBackdrop');
+      if (!nav || !trigger) return;
+
+      function open()  { nav.classList.add('is-open');    trigger.setAttribute('aria-expanded','true'); }
+      function close() { nav.classList.remove('is-open'); trigger.setAttribute('aria-expanded','false'); }
+      function toggle(){ nav.classList.contains('is-open') ? close() : open(); }
+
+      trigger.addEventListener('click', toggle);
+      backdrop.addEventListener('click', close);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setTimeout(close, 150));
+      });
+    })();
+  </script>
+</body>
+</html>

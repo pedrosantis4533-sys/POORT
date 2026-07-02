@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS Code | Criação de Sites, Tráfego Pago &amp; SEO</title>
+  
+  <!-- Otimizações SEO -->
+  <meta name="description" content="A PS Code cria sites personalizados de alta performance, tráfego pago com Google Ads e Meta Ads, SEO e gestão de redes sociais. Alavanque suas vendas online!">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Estilos Centralizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Backdrop do Menu Flutuante -->
+  <div class="ps-nav__backdrop" id="idealNavBackdrop"></div>
+
+  <!-- ════════════════════════════════════════════════
+     1. CABEÇALHO & MENU FLUTUANTE (ILHA DE VIDRO)
+     ════════════════════════════════════════════════ -->
+  <nav class="ps-nav" id="idealNav" aria-label="Menu principal">
+    
+    <!-- Ilha com os Links -->
+    <div class="ps-nav__island" id="idealNavIsland">
+      <a href="#hero" class="nav-link">
+        <img src="assets/logo.png" alt="Início">
+        Início
+      </a>
+      <a href="portfolio/" class="nav-link">
+        <img src="assets/icon-portfolio.png" alt="Portfólio">
+        Portfólio
+      </a>
+      <a href="#servicos" class="nav-link">
+        <img src="assets/icon-sites.png" alt="Serviços">
+        Serviços
+      </a>
+      <a href="precos/" class="nav-link">
+        <img src="assets/icon-precos.png" alt="Preços">
+        Preços
+      </a>
+      <a href="#contato" class="nav-link">
+        <img src="assets/icon-seo.png" alt="Contato">
+        Contato
+      </a>
+      
+      <div class="ps-nav__island-divider"></div>
+      
+      <a href="links/" class="nav-link">
+        <img src="assets/icon-links.png" alt="Links">
+        Links
+      </a>
+
+      <div class="ps-nav__island-divider"></div>
+
+      <!-- Links Sociais Rápidos -->
+      <div class="ps-nav__island-socials">
+        <a href="https://wa.me/5566992098255" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 11.957.01c3.178 0 6.165 1.238 8.411 3.486 2.247 2.247 3.483 5.234 3.481 8.412-.004 6.56-5.342 11.897-11.9 11.897h-.005c-1.998 0-3.957-.502-5.684-1.448L0 24zm6.305-1.654c1.611.956 3.195 1.458 4.887 1.458H11.95c5.452 0 9.887-4.436 9.889-9.886.002-2.64-1.029-5.123-2.898-6.994-1.868-1.87-4.35-2.902-6.991-2.902-5.45 0-9.884 4.438-9.886 9.888-.001 2.095.547 4.14 1.588 5.945l-.235-.374-3.74 1l1-3.647-.361-.214C1.378 17.03 1.05 15.02 1.05 11.892c.003-6.557 5.335-11.892 11.892-11.892 2.642 0 5.125 1.03 6.994 2.898a9.821 9.821 0 012.898 6.994c-.004 6.557-5.338 11.892-11.893 11.892h-.006c-1.996 0-3.956-.502-5.683-1.448l.361.214z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Botão Circular Gatilho -->
+    <div class="ps-nav__trigger" id="idealNavTrigger" role="button" aria-expanded="false" aria-label="Abrir menu">
+      <img src="assets/icon-trigger.png" alt="PS Logo Trigger">
+      <div class="ps-nav__trigger-x"></div>
+    </div>
+
+  </nav>
+
+  <!-- ════════════════════════════════════════════════
+     2. SEÇÃO HERO
+     ════════════════════════════════════════════════ -->
+  <header class="ps-hero" id="hero">
+    
+    <!-- Efeitos Visuais Aurora -->
+    <div class="ps-hero__glow"></div>
+    <div class="ps-hero__bottom-fade"></div>
+
+    <div class="ps-hero__container">
+      
+      <h1 class="ps-hero__headline" id="heroTitle">
+        Seu site deveria estar trabalhando por você <br><span>24 horas por dia.</span>
+      </h1>
+
+      <p class="ps-hero__desc" id="heroDesc">
+        Muitos negócios têm apenas uma página na internet que não atrai clientes no Google nem gera vendas. Na <strong>PS Code</strong>, nós desenvolvemos do zero estruturas de alta performance, tráfego pago segmentado e presença digital focada em <strong>converter cliques em faturamento.</strong>
+      </p>
+
+      <div class="ps-hero__cta-group" id="heroCTA">
+        <a href="#contato" class="btn-primary-neon">
+          Quero meu site agora
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <a href="#portfolio" class="btn-secondary-neon">
+          Ver projetos realizados
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════
+     3. SEÇÃO PORTFÓLIO
+     ════════════════════════════════════════════════ -->
+  <section class="ds-section" id="portfolio">
+    <div class="ds-container">
+
+      <div class="ds-header-group">
+        <span class="ds-tagline">Resultados reais</span>
+        <h2 class="ds-headline">Projetos que representam. <span>Clientes que crescem.</span></h2>
+        <p class="ds-desc">Trabalhos desenvolvidos sob medida, unindo tecnologia de carregamento instantâneo, design único e estratégias claras de vendas.</p>
+      </div>
+
+      <!-- Grid do Portfólio com mockups interativos -->
+      <div class="portfolio-grid">
+
+        <!-- Projeto 1 -->
+        <div class="portfolio-card">
+          <div class="portfolio-topbar">
+            <div class="port-dot port-dot-red"></div>
+            <div class="port-dot port-dot-yellow"></div>
+            <div class="port-dot port-dot-green"></div>
+          </div>
+          <div class="portfolio-video-wrapper">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            
+            <div class="portfolio-video-fallback">
+              <!-- SVG Notebook/Code Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="2" y1="20" x2="22" y2="20" stroke-linecap="round"/>
+                <line x1="12" y1="17" x2="12" y2="20"/>
+              </svg>
+              <h3 class="portfolio-fallback-title">Douglas Flamino</h3>
+              <p class="portfolio-fallback-cat">Landing Page Premium / Advocacia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="portfolio-card">
+          <div class="portfolio-topbar">
+            <div class="port-dot port-dot-red"></div>
+            <div class="port-dot port-dot-yellow"></div>
+            <div class="port-dot port-dot-green"></div>
+          </div>
+          <div class="portfolio-video-wrapper">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            
+            <div class="portfolio-video-fallback">
+              <!-- SVG Spa/Zen Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-linecap="round"/>
+                <path d="M12 6a9 9 0 0 1 6 6 9 9 0 0 1-6 6 9 9 0 0 1-6-6 9 9 0 0 1 6-6z"/>
+              </svg>
+              <h3 class="portfolio-fallback-title">Retiro Sufi</h3>
+              <p class="portfolio-fallback-cat">Website Institucional / Eventos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="portfolio-card">
+          <div class="portfolio-topbar">
+            <div class="port-dot port-dot-red"></div>
+            <div class="port-dot port-dot-yellow"></div>
+            <div class="port-dot port-dot-green"></div>
+          </div>
+          <div class="portfolio-video-wrapper">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            
+            <div class="portfolio-video-fallback">
+              <!-- SVG Health Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="portfolio-fallback-title">Odontologia Koza</h3>
+              <p class="portfolio-fallback-cat">Clínica Médica / Estética</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="portfolio-card">
+          <div class="portfolio-topbar">
+            <div class="port-dot port-dot-red"></div>
+            <div class="port-dot port-dot-yellow"></div>
+            <div class="port-dot port-dot-green"></div>
+          </div>
+          <div class="portfolio-video-wrapper">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            
+            <div class="portfolio-video-fallback">
+              <!-- SVG Cloud/SaaS Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="portfolio-fallback-title">Modelo Easy Builder</h3>
+              <p class="portfolio-fallback-cat">SaaS Landing Page / Tech</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="port-btn-container">
+        <a href="portfolio/index.html" class="btn-primary-neon">
+          Ver portfólio completo
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#contato" class="btn-secondary-neon">
+          Falar com especialista
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+     4. SEÇÃO SERVIÇOS
+     ════════════════════════════════════════════════ -->
+  <section class="ds-section" id="servicos" style="background-color: #07070d;">
+    <div class="ds-container">
+      
+      <div class="ds-header-group">
+        <span class="ds-tagline">Soluções PS Code</span>
+        <h2 class="ds-headline">Tecnologia &amp; Crescimento <span>de Ponta a Ponta.</span></h2>
+        <p class="ds-desc">Oferecemos tudo o que a sua empresa precisa para se destacar no Google, captar leads qualificados diariamente e engajar o público nas redes sociais.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Serviço 1: Criação de Sites -->
+        <a href="sites/" class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="2" y1="20" x2="22" y2="20"/>
+              <line x1="12" y1="17" x2="12" y2="20"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Criação de Sites</h3>
+          <p class="service-description">Landing Pages de alta conversão, Sites Institucionais e E-commerces ultra velozes construídos com design único, otimizados para converter visitantes em clientes.</p>
+          <ul class="service-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Código limpo (sem templates pesados)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Carregamento em menos de 1.5s</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Mobile-Friendly</li>
+          </ul>
+        </a>
+
+        <!-- Serviço 2: SEO & GEO -->
+        <a href="seo-e-geo/" class="service-card purple">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">SEO &amp; GEO</h3>
+          <p class="service-description">Posicionamos o seu negócio organicamente nas primeiras posições de busca local (Google Maps) e de busca nacional, garantindo cliques sem custo por anúncio.</p>
+          <ul class="service-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Otimização do Perfil da Empresa</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Palavras-chave locais (SEO local)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Auditoria e correção técnica</li>
+          </ul>
+        </a>
+
+        <!-- Serviço 3: Google Ads -->
+        <a href="google-ads/" class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 21H3V3"/>
+              <path d="M7 14l5-5 4 4 6-6"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Google Ads</h3>
+          <p class="service-description">Colocamos a sua empresa na frente de clientes que estão ativamente pesquisando pelo seu produto ou serviço no exato momento da necessidade.</p>
+          <ul class="service-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Anúncios focados em intenção de compra</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Negativação de termos irrelevantes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Relatórios focados em ROI</li>
+          </ul>
+        </a>
+
+        <!-- Serviço 4: Meta Ads -->
+        <a href="#contato" class="service-card purple">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Meta Ads</h3>
+          <p class="service-description">Alavanque sua captação de contatos com anúncios assertivos no Instagram e Facebook. Atraia leads qualificados com copy persuasiva e criativos focados em desejo.</p>
+          <ul class="service-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Campanhas de geração de leads direto no Whats</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Remarketing para resgatar visitantes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Testes AB de criativos e públicos</li>
+          </ul>
+        </a>
+
+        <!-- Serviço 5: Redes Sociais -->
+        <a href="#contato" class="service-card green">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Gestão de Redes Sociais</h3>
+          <p class="service-description">Branding e presença ativa. Planejamos conteúdo estético, posts estratégicos em carrossel e roteiros que conectam sua marca ao seu público de forma autêntica.</p>
+          <ul class="service-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Design visual premium e coeso</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Cronograma de postagens consistente</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Criação de relatórios de engajamento</li>
+          </ul>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+     5. SEÇÃO VALORES / PLANOS
+     ════════════════════════════════════════════════ -->
+  <section class="ds-section" id="precos">
+    <div class="ds-container">
+      
+      <div class="ds-header-group">
+        <span class="ds-tagline">Investimento</span>
+        <h2 class="ds-headline">Preços sob medida. <span>Orçamentos sob consulta.</span></h2>
+        <p class="ds-desc">Projetos de alta performance com investimento sob medida e personalizado para o tamanho da sua necessidade.</p>
+      </div>
+
+      <div class="prices-grid">
+        
+        <!-- Plano 1: Landing Page -->
+        <div class="price-card">
+          <h3 class="price-title">Landing Page</h3>
+          <p class="price-desc">Página única voltada para um único produto ou serviço. Ideal para tráfego pago.</p>
+          <div class="price-val-box">
+            <div class="price-val">Sob Consulta</div>
+          </div>
+          <ul class="price-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Design exclusivo focado em conversão</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Redação persuasiva (Copywriting)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Integração com WhatsApp/CRM</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Otimização de velocidade mobile</li>
+          </ul>
+          <a href="#contato" class="btn-secondary-neon price-cta-btn">Solicitar Projeto</a>
+        </div>
+
+        <!-- Plano 2: Institucional (Destaque) -->
+        <div class="price-card featured">
+          <span class="price-badge">Recomendado</span>
+          <h3 class="price-title">Site Institucional</h3>
+          <p class="price-desc">Estrutura completa multi-páginas para apresentar todos os serviços, história e blog.</p>
+          <div class="price-val-box">
+            <div class="price-val">Sob Consulta</div>
+          </div>
+          <ul class="price-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Até 5 páginas customizadas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Otimização estrutural de SEO</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Blog completo e área de notícias</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Suporte técnico por 30 dias</li>
+          </ul>
+          <a href="#contato" class="btn-primary-neon price-cta-btn">Solicitar Projeto</a>
+        </div>
+
+        <!-- Plano 3: Premium -->
+        <div class="price-card">
+          <h3 class="price-title">Gestão &amp; Performance</h3>
+          <p class="price-desc">Projetos contínuos de SEO, Tráfego Pago e Redes Sociais com metas comerciais claras.</p>
+          <div class="price-val-box">
+            <div class="price-val">Sob Consulta</div>
+          </div>
+          <ul class="price-features-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Gestão combinada Google + Meta Ads</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Produção de postagens &amp; criativos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Reuniões de alinhamento mensais</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dashboards de métricas comerciais</li>
+          </ul>
+          <a href="#contato" class="btn-secondary-neon price-cta-btn">Falar com Especialista</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+     6. CONTATO & WHATSAPP
+     ════════════════════════════════════════════════ -->
+  <section class="ds-section" id="contato" style="background-color: #030305;">
+    <div class="ds-container">
+      
+      <div class="contact-wrapper">
+        
+        <!-- Info -->
+        <div class="contact-info">
+          <h2 class="contact-info-title">Vamos criar algo <span>grandioso juntos?</span></h2>
+          <p class="ds-desc" style="text-align: left; margin: 0;">Preencha o formulário rápido para iniciarmos as análises técnicas do seu negócio. Se preferir um contato instantâneo, use nossos canais diretos.</p>
+          
+          <div class="contact-details">
+            
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <p>WhatsApp</p>
+                <a href="https://wa.me/5566992098255" target="_blank">(66) 99209-8255</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8m-2 11H4a2 2 0 01-2-2V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <p>E-mail</p>
+                <span>contato@pscode.com.br</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <div class="contact-form-card">
+          <form id="psContactForm">
+            <div class="form-grid">
+              
+              <div class="form-group">
+                <label for="formNome">Nome *</label>
+                <input type="text" id="formNome" class="form-input" placeholder="Seu nome completo" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formTel">Telefone / Whats *</label>
+                <input type="tel" id="formTel" class="form-input" placeholder="(00) 00000-0000" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="formEmail">E-mail corporativo *</label>
+                <input type="email" id="formEmail" class="form-input" placeholder="seuemail@empresa.com" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="formServico">Serviço de interesse</label>
+                <select id="formServico" class="form-input" style="background-color: #0b0b12;">
+                  <option value="Criação de Sites">Criação de Sites</option>
+                  <option value="SEO e GEO Google">Otimização de SEO e Google Maps</option>
+                  <option value="Tráfego Pago Google/Meta">Tráfego Pago (Google Ads &amp; Meta Ads)</option>
+                  <option value="Gerenciamento de Redes Sociais">Gerenciamento de Redes Sociais</option>
+                  <option value="Combo Completo">Combo Completo (Crescimento Acelerado)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="formMsg">Fale sobre o seu projeto (Opcional)</label>
+                <textarea id="formMsg" class="form-input" placeholder="Conte-nos um pouco sobre a sua meta e o seu negócio..."></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <button type="submit" class="btn-primary-neon form-submit-btn">
+                  Enviar para o WhatsApp
+                  <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════
+     7. FOOTER
+     ════════════════════════════════════════════════ -->
+  <footer class="ps-footer">
+    <a href="#hero" class="ps-footer__logo">PS <span>Code</span></a>
+    
+    <div class="ps-footer__nav">
+      <a href="#hero">Início</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#precos">Preços</a>
+      <a href="#contato">Contato</a>
+      <a href="links/index.html">Página de Links</a>
+    </div>
+
+    <div class="ps-footer__divider"></div>
+
+    <p class="ps-footer__copy">&copy; 2026 PS Code. Todos os direitos reservados. Desenvolvimento Premium.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

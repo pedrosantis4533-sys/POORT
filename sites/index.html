@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criação de Sites Profissionais | PS Code</title>
+  <meta name="description" content="Criamos sites personalizados do zero, rápidos, responsivos e focados em converter visitantes em clientes. Design premium e otimização SEO incluídos.">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800;12..96,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Central Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- GSAP for scroll animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Menu Flutuante -->
+  <nav class="ps-nav" id="idealNav" aria-label="Menu principal">
+    <div class="ps-nav__backdrop" id="idealNavBackdrop"></div>
+    <div class="ps-nav__island" id="idealNavIsland">
+      <a href="../#hero" class="nav-link">
+        <img src="../assets/logo.png" alt="Início">
+        Início
+      </a>
+      <a href="../portfolio/" class="nav-link">
+        <img src="../assets/icon-portfolio.png" alt="Portfólio">
+        Portfólio
+      </a>
+      <a href="#" class="nav-link is-active">
+        <img src="../assets/icon-sites.png" alt="Serviços">
+        Serviços
+      </a>
+      <a href="../precos/" class="nav-link">
+        <img src="../assets/icon-precos.png" alt="Preços">
+        Preços
+      </a>
+      <a href="../#contato" class="nav-link">
+        <img src="../assets/icon-seo.png" alt="Contato">
+        Contato
+      </a>
+      <div class="ps-nav__island-divider"></div>
+      <a href="../links/" class="nav-link">
+        <img src="../assets/icon-links.png" alt="Links">
+        Links
+      </a>
+      <div class="ps-nav__island-divider"></div>
+      <div class="ps-nav__island-socials">
+        <a href="https://wa.me/5566992098255" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="ps-nav__trigger" id="idealNavTrigger" role="button" aria-expanded="false" aria-label="Abrir menu">
+      <img src="../assets/icon-trigger.png" alt="PS Logo Trigger">
+      <div class="ps-nav__trigger-x"></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="sites-hero">
+    <div class="sites-glow-tl"></div>
+    <div class="sites-hero-inner">
+      <span class="sites-tag" id="sitesTag">Criação de Sites</span>
+      
+      <h1 class="sites-headline" id="sitesTitle">
+        Seu site deveria estar trabalhando por você <br>
+        <span>24 horas por dia.</span>
+      </h1>
+
+      <p class="sites-desc" id="sitesDesc">
+        A maioria dos negócios não tem site, tem uma página bonita que não aparece no Google, não convence ninguém e não vende nada. A gente faz diferente: criamos sites personalizados do zero, feitos para o seu público, para o seu produto e para a sua meta.
+      </p>
+
+      <a href="https://wa.me/5566992098255?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20o%20meu%20novo%20site." target="_blank" class="btn-sites" id="sitesHeroCTA" rel="nofollow noopener">
+        Quero meu site agora
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Process Section ("Como trabalhamos") -->
+  <section class="ideal-usvc-section" id="uServicesSection">
+    <div class="usvc-glow-tl"></div>
+    <div class="usvc-glow-br"></div>
+
+    <div class="usvc-container">
+      <div class="usvc-header">
+        <span class="ds-tagline-usvc" id="usvcTag">Minha abordagem</span>
+        <h2 class="ds-headline-usvc" id="usvcTitle">
+          Não existe um site para tudo.
+          <span>Existe o site certo para você.</span>
+        </h2>
+        <p class="ds-desc-usvc" id="usvcDesc">
+          Antes de escrever uma linha de código, eu preciso entender o seu negócio, quem é o seu cliente e o que você quer que ele faça ao entrar no seu site. A partir daí, criamos juntos — do zero — exatamente o que a sua demanda pede. Sem pacote pronto, sem template genérico, sem achismo.
+        </p>
+      </div>
+
+      <div class="usvc-grid">
+        <div class="usvc-card usvc-item">
+          <svg class="usvc-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h3>Primeiro, eu<br>te escuto</h3>
+          <p>Uma conversa sem pressa para entender o seu negócio, seus objetivos e o que você quer que o seu site faça por você.</p>
+        </div>
+
+        <div class="usvc-card usvc-item">
+          <svg class="usvc-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <h3>Depois, criamos<br>a estratégia</h3>
+          <p>Com base na sua necessidade, defino a estrutura, o conteúdo e o caminho que vai gerar mais resultado para o seu caso.</p>
+        </div>
+
+        <div class="usvc-card usvc-item">
+          <svg class="usvc-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/><line x1="12" y1="17" x2="12" y2="20"/></svg>
+          <h3>E entrego pronto<br>para vender</h3>
+          <p>Site no ar, rápido, responsivo e preparado para aparecer no Google — criado do zero, do jeito que o seu negócio precisa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section ("Máquina de resultados") -->
+  <section class="ideal-cases-section" id="casesSection">
+    <div class="cases-container">
+      <div class="cases-header">
+        <span class="ds-tagline-cases" id="casesTag">Site bom vai além do design</span>
+        <h2 class="ds-headline-cases" id="casesTitle">
+          Não entrego só um site bonito.
+          <span>Entrego uma máquina de resultados.</span>
+        </h2>
+        <p class="ds-desc-cases" id="casesDesc">
+          Cada projeto nasce de uma estratégia: quem é o seu cliente, o que ele precisa ver e qual ação você quer que ele tome. Clique em cada pilar para entender o que está por trás.
+        </p>
+      </div>
+
+      <div class="cases-split-layout">
+        <div class="cases-stack" id="casesStack">
+          <div class="stack-card card-color-1 is-active" data-target="m1">
+            <div class="card-number">1</div>
+            <div class="card-content">
+              <h3>Personalização Total</h3>
+              <p>Nenhum template. Criado do zero para o seu negócio.</p>
+            </div>
+          </div>
+
+          <div class="stack-card card-color-2" data-target="m2">
+            <div class="card-number">2</div>
+            <div class="card-content">
+              <h3>Estrutura SEO desde o Início</h3>
+              <p>Código e conteúdo já preparados para o Google.</p>
+            </div>
+          </div>
+
+          <div class="stack-card card-color-3" data-target="m3">
+            <div class="card-number">3</div>
+            <div class="card-content">
+              <h3>Performance Ultrarrápida</h3>
+              <p>Sites rápidos retêm visitante. Sites lentos perdem clientes.</p>
+            </div>
+          </div>
+
+          <div class="stack-card card-color-4" data-target="m4">
+            <div class="card-number">4</div>
+            <div class="card-content">
+              <h3>CTA Estratégico em Cada Seção</h3>
+              <p>Cada botão guia o visitante à ação certa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cases-display-window" id="casesWindow">
+          <div class="window-topbar">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="window-video-overlay"></div>
+          <div class="cases-manifesto" id="casesManifesto">
+            
+            <div class="manifesto-block is-visible" id="m1">
+              <span class="manifesto-tag">Personalização</span>
+              <h3 class="manifesto-title">Seu site é único porque o seu negócio é único.</h3>
+              <p class="manifesto-text">
+                Trabalho com template zero. Cada site começa do rascunho: identidade visual, tom de voz, estrutura de navegação e conteúdo, tudo pensado para o seu mercado e para o cliente que você quer atrair. O resultado é um site que parece feito por uma grande agência, mas com o cuidado de quem entende o seu negócio de perto.
+              </p>
+            </div>
+
+            <div class="manifesto-block" id="m2">
+              <span class="manifesto-tag">SEO Técnico</span>
+              <h3 class="manifesto-title">Aparecer no Google não é sorte, é estrutura.</h3>
+              <p class="manifesto-text">
+                Seu site já nasce otimizado: código semântico, meta tags corretas, velocidade de carregamento, URL amigável e arquitetura de conteúdo que facilita o rastreamento. Enquanto sites mal construídos ficam invisíveis, o seu está posicionado para <span class="m-highlight">crescer organicamente desde o primeiro dia no ar.</span>
+              </p>
+            </div>
+
+            <div class="manifesto-block" id="m3">
+              <span class="manifesto-tag">Performance</span>
+              <h3 class="manifesto-title">Um site lento perde o cliente antes de carregar.</h3>
+              <p class="manifesto-text">
+                Pesquisas mostram que 53% dos visitantes abandonam um site que demora mais de 3 segundos para abrir. Entrego sites com carregamento ultrarrápido, imagens otimizadas, código limpo e hospedagem de alta performance, para que o visitante <span class="m-highlight">chegue, leia e compre.</span>
+              </p>
+            </div>
+
+            <div class="manifesto-block" id="m4">
+              <span class="manifesto-tag">Conversão</span>
+              <h3 class="manifesto-title">Cada seção do site tem um propósito: converter.</h3>
+              <p class="manifesto-text">
+                Não basta ter um site bonito. Cada bloco, cada título e cada botão é pensado para guiar o visitante até a ação que você quer: ligar, comprar, agendar ou falar no WhatsApp. A arquitetura de conversão é o que diferencia <span class="m-highlight">um site que vende de um site que só ocupa espaço.</span>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="seo-cta-block" style="border: none; border-radius: 0; background: #050508; padding: 100px 4vw;">
+    <h2 class="seo-cta-title">Vamos criar a sua <span>máquina de resultados?</span></h2>
+    <p class="seo-cta-desc">
+      Converse conosco hoje mesmo e entenda o escopo ideal para o seu momento comercial.
+    </p>
+    <a href="https://wa.me/5566992098255?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20a%20cria%C3%A7%C3%A3o%20de%20um%20site." target="_blank" class="btn-seo-wpp" rel="nofollow noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+      Falar pelo WhatsApp
+    </a>
+  </section>
+
+  <!-- Footer Completo -->
+  <footer class="ideal-footer" id="idealFooter">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="../assets/logo.png" alt="PS Code Logo" class="footer-logo-img">
+            <div class="footer-logo-name">
+              PS Code
+              <span>Tech &amp; Marketing</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Sites personalizados, SEO, tráfego pago (Google &amp; Meta Ads) e gestão de redes sociais para negócios que querem crescer online de verdade.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/5566992098255" target="_blank" class="footer-social-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Páginas</p>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio/index.html">Portfólio</a>
+          <a href="../links/index.html">Links</a>
+          <a href="../index.html#contato">Contato</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Serviços</p>
+          <a href="../index.html#servicos">Criação de Sites</a>
+          <a href="../index.html#servicos">SEO &amp; GEO</a>
+          <a href="../index.html#servicos">Google Ads &amp; Meta Ads</a>
+          <a href="../index.html#servicos">Redes Sociais</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Contato</p>
+          <a href="https://wa.me/5566992098255" target="_blank">WhatsApp</a>
+          <a href="mailto:contato@pscode.com.br">E-mail</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 PS Code. Todos os direitos reservados.</p>
+        <p class="footer-copy">Site · SEO · Tráfego Pago · Social Media</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initial animations
+    gsap.timeline()
+      .to('#sitesTag',     { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' })
+      .to('#sitesTitle',   { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.3')
+      .to('#sitesDesc',    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4')
+      .to('#sitesHeroCTA', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4');
+
+    // Process Cards Animation
+    gsap.to('#usvcTitle', { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '#uServicesSection', start: 'top 80%' } });
+    gsap.to('#usvcDesc', { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '#uServicesSection', start: 'top 78%' } });
+    gsap.to('.usvc-item', {
+      opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power2.out',
+      scrollTrigger: { trigger: '.usvc-grid', start: 'top 85%' }
+    });
+
+    // Features Section Animation
+    gsap.to('#casesTitle', { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '#casesSection', start: 'top 80%' } });
+    gsap.to('#casesDesc', { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '#casesSection', start: 'top 78%' } });
+    gsap.to('.stack-card', {
+      opacity: 1, x: 0, duration: 0.7, stagger: 0.12, ease: 'power2.out',
+      scrollTrigger: { trigger: '#casesStack', start: 'top 80%' }
+    });
+    gsap.to('#casesWindow', {
+      opacity: 1, scale: 1, duration: 0.8, ease: 'power2.out',
+      scrollTrigger: { trigger: '#casesWindow', start: 'top 80%' }
+    });
+
+    // Split Layout Tabs Logic
+    (function () {
+      const cards = document.querySelectorAll('#casesStack .stack-card');
+      const win = document.getElementById('casesWindow');
+      if (!cards.length || !win) return;
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          // Remove active from all cards
+          cards.forEach(c => c.classList.remove('is-open', 'is-active'));
+          // Add active to clicked card
+          card.classList.add('is-active');
+
+          const target = card.getAttribute('data-target');
+          // Hide all manifesto blocks
+          const blocks = document.querySelectorAll('.manifesto-block');
+          blocks.forEach(b => b.classList.remove('is-visible'));
+          // Show target block
+          const targetBlock = document.getElementById(target);
+          if (targetBlock) {
+            targetBlock.classList.add('is-visible');
+          }
+        });
+      });
+    })();
+
+    // Menu logic
+    (function () {
+      const nav      = document.getElementById('idealNav');
+      const trigger  = document.getElementById('idealNavTrigger');
+      const backdrop = document.getElementById('idealNavBackdrop');
+      if (!nav || !trigger) return;
+
+      function open()  { nav.classList.add('is-open');    trigger.setAttribute('aria-expanded','true'); }
+      function close() { nav.classList.remove('is-open'); trigger.setAttribute('aria-expanded','false'); }
+      function toggle(){ nav.classList.contains('is-open') ? close() : open(); }
+
+      trigger.addEventListener('click', toggle);
+      backdrop.addEventListener('click', close);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setTimeout(close, 150));
+      });
+    })();
+  </script>
+</body>
+</html>
