@@ -93,50 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ════════════════════════════════════════════════
-     3. CONTROLE DE VÍDEO DO PORTFÓLIO (HOVER)
-     ════════════════════════════════════════════════ */
-  const portfolioCards = document.querySelectorAll('.portfolio-card');
-  
-  portfolioCards.forEach(card => {
-    const video = card.querySelector('.portfolio-video');
-    if (video) {
-      // Reproduzir no mouseenter
-      card.addEventListener('mouseenter', () => {
-        video.play().then(() => {
-          card.classList.add('is-playing');
-        }).catch(() => {
-          // Navegador pode bloquear auto-play
-        });
-      });
-      
-      // Pausar no mouseleave
-      card.addEventListener('mouseleave', () => {
-        video.pause();
-        card.classList.remove('is-playing');
-      });
-      
-      // Clique (mobile)
-      card.addEventListener('click', () => {
-        if (video.paused) {
-          // Pausa outros vídeos tocando
-          portfolioCards.forEach(c => {
-            const v = c.querySelector('video');
-            if (v && v !== video) {
-              v.pause();
-              c.classList.remove('is-playing');
-            }
-          });
-          video.play().then(() => {
-            card.classList.add('is-playing');
-          });
-        } else {
-          video.pause();
-          card.classList.remove('is-playing');
-        }
-      });
-    }
-  });
 
   /* ════════════════════════════════════════════════
      4. FORMULÁRIO DE CONTATO → WHATSAPP INTEGRATION

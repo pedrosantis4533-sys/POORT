@@ -606,7 +606,7 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  cursor: pointer;
+  cursor: default;
   opacity: 0;
   transform: translateY(40px);
 }
@@ -650,7 +650,7 @@ body {
   overflow: hidden;
 }
 
-.portfolio-video {
+.portfolio-static-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -658,45 +658,28 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.portfolio-card.is-playing .portfolio-video {
-  opacity: 1;
-  z-index: 2;
+.portfolio-card:hover .portfolio-static-img {
+  transform: scale(1.06);
 }
 
-.portfolio-card.is-playing .play-overlay {
-  opacity: 0 !important;
-}
-
-/* Fallback Estético nos Cards */
-.portfolio-video-fallback {
+.portfolio-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #090B12 0%, #050508 100%);
+  background: linear-gradient(to top, rgba(5, 5, 8, 0.85) 0%, rgba(5, 5, 8, 0.35) 60%, rgba(5, 5, 8, 0.1) 100%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   padding: 24px;
   z-index: 1;
+  transition: background 0.4s ease;
 }
 
-.portfolio-video-fallback svg {
-  width: 48px;
-  height: 48px;
-  color: var(--accent-cyan);
-  opacity: 0.6;
-  margin-bottom: 12px;
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));
-  transition: transform 0.4s ease;
-}
-
-.portfolio-card:hover .portfolio-video-fallback svg {
-  transform: scale(1.1);
+.portfolio-card:hover .portfolio-card-overlay {
+  background: linear-gradient(to top, rgba(5, 5, 8, 0.95) 0%, rgba(5, 5, 8, 0.45) 60%, rgba(5, 5, 8, 0.15) 100%);
 }
 
 .portfolio-fallback-title {
@@ -706,6 +689,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-fallback-cat {
@@ -715,6 +700,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .play-overlay {
@@ -1394,69 +1380,7 @@ textarea.form-input {
 /* ════════════════════════════════════════════════
    PORTFOLIO PAGE STYLING
    ════════════════════════════════════════════════ */
-.video-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.96);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 40px;
-}
 
-.video-modal.open { display: flex; }
-
-.modal-inner {
-    position: relative;
-    width: 100%;
-    max-width: 1100px;
-    aspect-ratio: 16/9;
-    border-radius: 20px;
-    border: 1px solid rgba(0, 229, 255, 0.25);
-    box-shadow:
-        0 0 0 1px rgba(255,255,255,0.06),
-        0 0 60px rgba(0, 229, 255, 0.08),
-        0 0 120px rgba(112, 0, 255, 0.06),
-        0 32px 80px rgba(0,0,0,0.8);
-    overflow: hidden;
-}
-
-.modal-video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: #000;
-    display: block;
-}
-
-.modal-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
-    background: rgba(0,0,0,0.7);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #FFFFFF;
-    transition: all 0.3s ease;
-    z-index: 10000;
-    backdrop-filter: blur(8px);
-}
-
-.modal-close:hover {
-    background: rgba(0,229,255,0.2);
-    border-color: #00E5FF;
-    color: #00E5FF;
-    transform: scale(1.1);
-}
 
 .modal-close svg {
     width: 18px;
@@ -1569,7 +1493,7 @@ textarea.form-input {
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    cursor: pointer;
+    cursor: default;
     opacity: 0;
     transform: translateY(40px);
 }
@@ -1608,26 +1532,17 @@ textarea.form-input {
     display: block;
 }
 
-.port-play {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) scale(0.85);
-    width: 64px; height: 64px;
-    background: rgba(0,229,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1.5px solid var(--accent-cyan);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 5;
+.port-static-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.port-play svg { width: 22px; height: 22px; fill: var(--accent-cyan); margin-left: 3px; }
-.port-card:hover .port-play { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-.port-card.is-playing .port-play { opacity: 0 !important; }
+.port-card:hover .port-static-img {
+    transform: scale(1.06);
+}
 
 .port-card-info {
     padding: 16px 20px;
@@ -4028,6 +3943,30 @@ textarea.form-input {
     .manifesto-text { font-size: 15px !important; }
     .manifesto-title { font-size: 18px; }
     .btn-sites { width: 100%; justify-content: center; }
+}
+
+/* Ajustes responsivos finos para os cards do portfólio no celular */
+@media (max-width: 576px) {
+  .portfolio-card-overlay {
+    padding: 16px;
+  }
+  .portfolio-fallback-title {
+    font-size: 18px !important;
+  }
+  .portfolio-fallback-cat {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+  }
+  .port-card-info {
+    padding: 12px 16px !important;
+  }
+  .port-card-name {
+    font-size: 15px !important;
+  }
+  .port-card-tag {
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+  }
 }
 
 
